@@ -1,13 +1,17 @@
 *{
     margin: 0px;
     padding: 0px;
-    border-radius: ;
+    background-color: black;
 }
 
 .circle{
-    width: 150px;
-    height: 150px;
-    background: aqua;
-    border-radius: 50%;
-    position: absolute;
+    /* position: absolute; */
+    transition-duration: 1s;
+    transition-property: width,height;
+}
+
+.circle:hover{
+    width: 0px;
+    height: 0px;
+    
 }
