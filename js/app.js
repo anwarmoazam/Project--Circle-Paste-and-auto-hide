@@ -10,7 +10,13 @@ document.addEventListener('mousemove', getPosition);
 document.addEventListener('click',pasteRandomCircle);
 
 function pasteRandomCircle({clientX,clientY}) {
-    let newCircle = generateRandomCircle();
+    let newCircle = document.querySelector('.circle');
+    if(newCircle){
+        console.log('yes');
+    } else{
+        console.log('no');
+    }
+    newCircle = generateRandomCircle();
     console.log(newCircle);
     document.body.appendChild(newCircle);
     newCircle.style.left = `${clientX - (newCircle.clientWidth)/2}px`;
@@ -32,7 +38,11 @@ function updateState(){
 }
 
 function getPosition(e){
-
+    const circle = document.querySelector('.circle');
+    if(circle){
+        circle.style.left = `${e.clientX - (circle.clientWidth)/2}px`;
+        circle.style.top = `${e.clientY - (circle.clientHeight)/2}px`;
+    }
 }
 
 function generateRandomCircle(){
