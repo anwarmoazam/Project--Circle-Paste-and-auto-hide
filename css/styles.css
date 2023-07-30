@@ -1,17 +1,10 @@
-*{
+body{
     margin: 0px;
     padding: 0px;
     background-color: black;
 }
 
 .circle{
-    /* position: absolute; */
-    transition-duration: 1s;
-    transition-property: width,height;
+    position: absolute;
 }
 
-.circle:hover{
-    width: 0px;
-    height: 0px;
-    
-}
